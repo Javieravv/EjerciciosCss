@@ -1,0 +1,76 @@
+/*
+Se recomienda declarar las variables en la raíz.
+pero pueden declararse en cualquier otro lugar, solo que las variables
+solo servirán para ese elemento y sus hijos.
+*/
+:root {
+    --primary: tomato;
+    --secondary: #fff;
+    --boxShadow: 0 5px 5px 5px rgba(0, 0, 0, 0.8);
+    --clipPath: circle(35% at top left);
+    --transition: clip-path 500s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:arial,sans-serif;
+    display: grid;
+    justify-items: center;
+    padding: 80px;
+    gap: 20px;
+
+}
+
+.buttom {
+    background-color: var(--primary, steelblue);
+    color: var(--secondary);
+    text-decoration: none;
+    padding: 18px 30px;
+    display: inline-block;
+    border-radius: 30px;
+}
+
+.texts {
+    /*la variable colorfondo solo servirá en su scope, que es el div texts*/
+    --colorfondo: #000;
+}
+
+.button--cta {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: 1px solid;
+}
+
+.title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    justify-self: center;
+    color: var(--primary);
+    margin-bottom: 20px;
+    background-color: var(--colorfondo);
+}
+
+.subtitle {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.square {
+    background-color: var(--primary);
+    width: 200px;
+    height: 200px;
+    box-shadow: var(--boxShadow);
+    clip-path: var(--clipPath);
+    transition: var(--transition);
+}
+
+.square:hover {
+    --clipPath: circle (150% at top left);
+}
+
