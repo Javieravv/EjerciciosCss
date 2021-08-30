@@ -1,5 +1,5 @@
 let listElements = document.querySelectorAll('.list_button--click');
-console.log(listElements);
+// console.log(listElements);
 
 listElements.forEach(listElement => {
     listElement.addEventListener('click', () => {
