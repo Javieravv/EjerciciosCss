@@ -142,6 +142,7 @@ body {
         padding: 25px 0;
         padding-left: 30px;
         height:auto;
+        /* width: 90%; */
     }
 
     .menu__arrow {
@@ -152,7 +153,8 @@ body {
     .menu__nesting {
         display: grid;
         position: unset;
-        width: 100px;
+        /* width: 100px; */
+        width: 10   0%;
         transform: translateY(0);
         height: 0;
         transition: height .3s;
