@@ -14,6 +14,8 @@ body {
     background-color: #1a202c;
     color: #fff;
     height:70px;
+    font-size: 1.5em;
+    font-weight: 300;
 }
 
 .menu__container {
@@ -69,7 +71,7 @@ body {
 .menu__nesting {
     list-style: none;
     clip-path: var(--clip);
-    transition: clip-path .3s;
+    transition: clip-path .5s;
     position: absolute;
     right:0;
     bottom:0;
