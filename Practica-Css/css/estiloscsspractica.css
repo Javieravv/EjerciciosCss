@@ -1,0 +1,80 @@
+/*EStilos poara esta práctica */
+
+/* Estilos generales */
+
+:root {
+    --backgroundColorMenu: #390b64;
+    --fontColorMenu: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Estilos menú principal */
+
+.mainmenu {
+    width: 100%;
+    background-color: var(--backgroundColorMenu);
+}
+
+.container__menu {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    color: var(--fontColorMenu);
+    height: 100%;
+}
+
+.mainmenu__title {
+    font-size: 1.8rem;
+}
+
+.mainmenu__options {
+    display:flex;
+    justify-content: space-between;
+}
+
+.mainmenu__link {
+    list-style: none;
+    padding: 20px;
+    font-weight: 300;
+}
+
+
+.mainmenu__link a {
+    color: var(--fontColorMenu);;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.mainmenu__link:hover {
+    background-color: #d4b4f3;
+    font-weight: bold;
+}
+
+/* .mainmenu__link a:hover {
+    display: block;
+    transform: rotate(-15deg);
+    transition: transform 500ms;
+} */
+
+
+/* Estilos contenedor de cards */
+
+
+
+/* Estilos redes sociales */
+
+
+
+/* Fin de Páginas */
+
+
+
+
