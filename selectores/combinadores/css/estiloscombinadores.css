@@ -1,0 +1,97 @@
+/* Estilos para los selectores combinadorfes */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Selectores combinadores 
+Combinan más de un selector básico. Permiten ser más específico. 
+sobre qué elementos queremos seleccionar.
+se ocupa más de un selector
+*/
+
+/* 1. Combinador de descendientes.
+Se representa por espacio en blanco
+El segundo elemento debe estar dentro del primero. Padre directo -> hijo
+Descendencia 
+Selecciona a todos los descendientes.
+*/
+
+ul .lista {
+    text-decoration: underline;
+}
+
+.todo .lista {
+    list-style: decimal;
+}
+
+.dias .lista {
+    list-style: lower-alpha;
+    color: rgb(255, 38, 0);
+    font-weight: bold;
+}
+
+/*
+2.- Combinador de hijos directos.
+Igual al anterior. Se representar por un signo >
+
+El primer selector debe ser padre o contenedor directo del segundo selector.
+Solo selecciona a los hijos directos.
+
+Agrega demasiada especificad. Puede ser problema a futuro.
+*/
+
+.listas > .lista {
+    list-style: upper-roman;
+}
+
+.dias > .lista {
+    color: orangered;
+    font-size: 1.5em;
+}
+
+/*Combinador de hermano adyacente. 
+El segundo selector debe ser un hermano adyacente del primer elemento.
+Solo seleccionar ese siguiente hermano.
+Se repreenta con el signo +
+Puede usarse el selector universal para que tome al hemrnao adyacente, cualquiera que sea
+Es util para animaciones.
+
+.subtitulo * {}
+
+*/
+
+.subtitulo + .parrafo {
+    background-color:rgb(255, 196, 0);
+    display: none;
+    opacity: 0;
+    transition: 3s;
+}
+
+/* La pseudoclase es un comportamiento en el navegador.
+Ejemplo: pasar el mouse por encima de algún elemento*/
+
+.subtitulo:hover {
+    cursor: pointer;
+}
+
+.subtitulo:hover + .parrafo {
+    cursor: pointer;
+    background-color: steelblue;
+    opacity: 1;
+    display: block;
+}
+
+/* Combinador de hermanos generales. 
+Se representa por al virgueilla ~
+El segundo selector debe ser un hermano siguiente al  primer selector.
+Similar al de hermano adyacente, pero seleccionará a los hermanos siguientes.
+Sirve para crear animaciones, como menús de navegación.
+*/
+
+.subtitulo ~ .parrafo {
+    background-color: tomato;
+}
+

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/*
+Se pueden seleccionar elementos por sus atributos. Por ejemplo type.
+Se hace con el nombre del atributo entre corchetes
+
+[<nombre atributo>] {}
+
+*/
+
+[class]{
+    background-color: rgb(140, 140, 235);
+}
+
+[type] {
+    background-color: rgb(205, 245, 144);
+}
+
+[value] {
+    display: block;
+    width: 91%;
+    margin-top: 1em;
+}
+
+[type="text"]{
+    color: red;
+    font-size: 1.5em;
+}
+
+[type="email"]{
+    color: orange;
+    font-size: 1.7em;
+}
+
+/*Busca los que tengan el texto. En este caso "el" */
+[value ~="el"]{
+    font-style: italic;
+}
+
+/*Los que tengan el texto al principio*/
+
+[value ^="Enviar"]{
+    color: blue;
+    font-size: 2em;
+}
+
+/*Los queterminen con  el texto al principio*/
+
+[value $="curso"]{
+    color: rgb(255, 0, 234);
+    font-size: 2em;
+}

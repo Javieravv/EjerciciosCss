@@ -1,0 +1,64 @@
+/* EStilosp para el ejercicio. */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;700&display=swap');
+
+/* Selector de tipo, de nombre o de etiqueta.
+Selecciona una etiqueta bajo su nombre, mediante el nombre de la misma.
+Ejemplo: h2 
+No se recomiendam ucho su uso*/
+
+/* Selector Universal*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Lato', 'Arial', sans-serif;
+}
+
+h2 {
+    color: rgb(23, 20, 220);
+    font-size: 2.5em;
+}
+
+li {
+    color: slateblue;
+    font-size: 1em;
+}
+
+/* Selector de clase 
+Hay metodologías para escribir clases de mejor manera
+Dan sentido al nombre de cada clase
+*/
+
+.peliculas {
+    color: crimson;
+}
+
+.series {
+    font-size: 3rem;
+}
+
+.favoritas {
+    font-weight: 700;
+    color: rebeccapurple;
+    font-size: 1.2em;
+}
+
+/* Selector de Id
+Selecciona elementos por el nombre dnetro del atributo id */
+
+#spidermanNoWayHome {
+    font-size: 2.2em;
+    color: tomato;
+    text-decoration: underline;
+}
+
+#temporada3 {
+    font-size: 1.1em;
+    color: orange;
+    text-decoration: underline;
+}
+
+/* Selectores combinadores */
