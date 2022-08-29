@@ -1,0 +1,26 @@
+.container {
+    width:90%;
+    margin: 0 auto;
+    background-color: rgb(49, 205, 244);
+    min-height: 100vh;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 400px));
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid blue;
+    min-height: 200px;
+    font-size: 4rem;
+    font-weight:bold;
+}

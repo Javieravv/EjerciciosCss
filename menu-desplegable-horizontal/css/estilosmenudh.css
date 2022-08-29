@@ -102,6 +102,8 @@ body {
     width: 36px;
 }
 
+/* Para contenido responsive */
+
 @media (max-width: 800px) {
     .menu__hamburguer {
         display:flex;
@@ -112,7 +114,7 @@ body {
         overflow: hidden;
     }
 
-    .menu_item--active {
+    .menu__item--active {
         --transform: rotate(0);
         --background: #4f7edb;
     }

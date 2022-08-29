@@ -1,0 +1,16 @@
+{
+  "name": "responsive-cards",
+  "version": "1.0.0",
+  "description": "Ejercicio responsive cards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css",
+    "grid",
+    "layout"
+  ],
+  "author": "Javier Vargas",
+  "license": "ISC"
+}
