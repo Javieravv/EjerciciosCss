@@ -1,0 +1,220 @@
+/* Estilos generales */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    width: 1400px;
+}
+
+.container {
+    /* width: 90%; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    height: 100vh;
+}
+
+.left-section {
+    width: 400px;
+    background-color: rgb(66, 66, 138);
+    display: grid; 
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px; 
+    grid-template-rows: 75px 50px 100px 100px 1fr 1fr 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    position: relative;
+    grid-template-areas: 
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."; 
+}
+
+.right-section {
+    width: auto; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta-front {
+    background-image: url(../images/bg-card-front.png);
+    width: 447px;
+    height: 245px;
+    border-radius:10px;
+    z-index: 15;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    position: absolute;
+
+}
+.tarjeta-back {
+    background-image: url(../images/bg-card-back.png);
+    width: 447px;
+    height: 245px;
+    border-radius:10px;
+    grid-column-start: 4;
+    z-index: 15;
+    grid-row-start: 6;
+    position: absolute;
+}
+
+.formulario {
+    width: 500px;
+    min-height: 250px;
+    margin-left: 250px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    height: 50px;
+    padding: 0 15px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: 8px;
+}
+
+.datos-adicionales {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.date-expiration {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.date-expiration input {
+    width: 100px;
+}
+
+.number-cfv {
+
+}
+
+.number-cfv input {
+    width: 250px;
+}
+
+.btn-confirmar {
+    background-color: blue;
+    width: 100%;
+    color: white;
+}
+
+
+/* medias queries  */
+
+@media screen and (max-width: 1000px) {
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    .tarjeta-front {
+        background-image: url(../images/bg-card-front-400.png);
+        width: 400px;
+        height: 219px;
+    
+    }
+    .tarjeta-back {
+        background-image: url(../images/bg-card-back-400.png);
+        width: 400px;
+        height: 219px;
+    }
+        
+}
+
+
+@media screen and (max-width: 900px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    .left-section {
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;  
+    }
+
+    .tarjeta-front {
+        grid-row-start: 6;
+        z-index: 50;
+        margin-top: 5px;
+    }
+
+    .tarjeta-back {
+        grid-row-start: 2;
+    }
+
+    .right-section {
+        width: 100%; 
+    }
+
+    .formulario {
+        margin-left: 0;
+        margin-top: 100px;
+    }
+        
+}
+
+@media screen and (max-width: 600px) {
+
+    .left-section {
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;  
+    }
+
+    .tarjeta-front {
+        background-image: url(../images/bg-card-front-350.png);
+        width: 350px;
+        height: 192px;
+        grid-row-start: 6;
+        z-index: 50;
+        margin-top: 5px;
+    }
+
+    .tarjeta-back {
+        grid-row-start: 2;
+        grid-column-start: 3;
+        background-image: url(../images/bg-card-back-350.png);
+        width: 350px;
+        height: 192px;
+    }
+
+    .right-section {
+        width: 100%; 
+    }
+
+    .formulario {
+        margin-left: 0;
+        margin-top: 100px;
+    }
+
+    .formulario {
+        padding: 1px 10px;
+    }
+}
+
