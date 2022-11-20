@@ -1,0 +1,202 @@
+/* Estilos generales */
+:root {
+    --width-image-card: 450px;
+    --width-body: 1400px;
+    --width-left-section: 450px;
+    --width-right-section: calc(100% - var(--width-left-section));
+    --width-formulario: 500px;
+    --width-date-expiration: calc(var(--width-formulario) * 0.45);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    width: var(--width-body);
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+.left-section {
+    width: var(--width-left-section);
+    background-color: rgb(66, 66, 138);
+    display: grid; 
+    /* grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;  */
+    grid-template-columns: repeat(8, calc(var(--width-left-section) / 8)); 
+    grid-template-rows: 75px 50px 100px 100px 1fr 1fr 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    position: relative;
+    grid-template-areas: 
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."; 
+}
+
+.right-section {
+    width: var(--width-right-section); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta-front {
+    width: var(--width-image-card);
+    border-radius:10px;
+    z-index: 15;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    position: absolute;
+
+}
+.tarjeta-back {
+    width: var(--width-image-card);
+    border-radius:10px;
+    grid-column-start: 4;
+    z-index: 15;
+    grid-row-start: 6;
+    position: absolute;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    /* auto */
+}
+
+.formulario {
+    width: var(--width-formulario);
+    min-height: 250px;
+    /* margin-left: 250px; */
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    height: 50px;
+    padding: 0 15px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: 8px;
+}
+
+.datos-adicionales {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.date-expiration {
+    /* padding: 0 25px; */
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: var(--width-date-expiration);
+}
+
+.date-expiration input {
+    width: calc((var(--width-date-expiration) / 2) - 10px);
+}
+
+.number-cfv {
+    width: calc(var(--width-formulario) * 0.55);
+
+}
+
+.number-cfv input {
+    
+}
+
+.btn-confirmar {
+    background-color: blue;
+    width: 100%;
+    color: white;
+}
+
+
+/* medias queries  */
+
+@media screen and (max-width: 1000px) {
+    :root {
+        --width-image-card: 350px;
+        --width-body: 1000px;
+        --width-left-section: 350px;
+        /* --width-right-section: calc(100% - var(--width-left-section)); */
+        --width-formulario: 350px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    :root {
+        --width-image-card: 300px;
+        --width-body: 900px;
+        --width-left-section: 300px;
+        /* --width-right-section: calc(100% - var(--width-left-section)); */
+        --width-formulario: 300px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --width-image-card: 270px;
+        --width-body: 100%;
+        --width-left-section: 100%;
+        --width-right-section: 100%;
+        --width-formulario: 100%;
+        /* --width-date-expiration: calc(var(--width-formulario) * 0.45); */
+    }
+
+    .container {
+        flex-direction: column;
+    }
+    
+    .left-section {
+        grid-template-rows: repeat(10, 20px); 
+    }
+
+    .tarjeta-front {
+        grid-column-start: 2;
+        grid-row-start: 7;
+        position: absolute;
+        z-index: 25;
+    }
+    .tarjeta-back {
+        grid-column-start: 4;
+        grid-row-start: 4;
+    }
+
+    .formulario {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 90px;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    :root {
+        --width-image-card: 200px;
+    }
+}

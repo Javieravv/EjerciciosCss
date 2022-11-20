@@ -33,7 +33,7 @@ img {
 
 .imagen1 p, .imagen2 p {
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 50px;
     color: white;
     text-transform: capitalize;
@@ -50,8 +50,8 @@ img {
 
 @media screen and (max-width: 900px) {
     :root {
-        --width-imagen1: 600px;
-        --width-imagen2: 400px;
+        --width-imagen1: 500px;
+        --width-imagen2: 300px;
     }
 }
 
