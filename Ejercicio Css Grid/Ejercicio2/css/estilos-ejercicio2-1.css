@@ -1,11 +1,13 @@
 /* Estilos generales */
 :root {
     --width-image-card: 450px;
+    --max-width-image: 457px;
     --width-body: 1400px;
     --width-left-section: 450px;
     --width-right-section: calc(100% - var(--width-left-section));
     --width-formulario: 500px;
     --width-date-expiration: calc(var(--width-formulario) * 0.45);
+    --percent-image: 0.45;
 }
 
 
@@ -24,7 +26,7 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    min-height: 100vh;
+    min-height: 750px;
 }
 
 .left-section {
@@ -58,7 +60,7 @@ body {
 }
 
 .tarjeta-front {
-    width: var(--width-image-card);
+    width: calc(var(--width-body) * var(--percent-image));
     border-radius:10px;
     z-index: 15;
     grid-column-start: 2;
@@ -67,7 +69,7 @@ body {
 
 }
 .tarjeta-back {
-    width: var(--width-image-card);
+    width: calc(var(--width-body) * var(--percent-image));
     border-radius:10px;
     grid-column-start: 4;
     z-index: 15;
@@ -77,6 +79,8 @@ body {
 
 img {
     width: 100%;
+    max-width: var(--max-width-image);
+    min-width: 200px;
     object-fit: cover;
     /* auto */
 }
@@ -84,7 +88,7 @@ img {
 .formulario {
     width: var(--width-formulario);
     min-height: 250px;
-    /* margin-left: 250px; */
+    padding: 2px 5px;
 }
 
 label {
@@ -94,7 +98,7 @@ label {
 
 input {
     height: 50px;
-    padding: 0 15px;
+    padding: 0 10px;
     border: 1px black solid;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -102,30 +106,14 @@ input {
 }
 
 .datos-adicionales {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 5px;
 }
 
 .date-expiration {
-    /* padding: 0 25px; */
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    width: var(--width-date-expiration);
-}
-
-.date-expiration input {
-    width: calc((var(--width-date-expiration) / 2) - 10px);
-}
-
-.number-cfv {
-    width: calc(var(--width-formulario) * 0.55);
-
-}
-
-.number-cfv input {
-    
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .btn-confirmar {
@@ -139,33 +127,22 @@ input {
 
 @media screen and (max-width: 1000px) {
     :root {
-        --width-image-card: 350px;
         --width-body: 1000px;
         --width-left-section: 350px;
         /* --width-right-section: calc(100% - var(--width-left-section)); */
         --width-formulario: 350px;
+        --percent-image: 0.35;
     }
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
     :root {
-        --width-image-card: 300px;
-        --width-body: 900px;
-        --width-left-section: 300px;
-        /* --width-right-section: calc(100% - var(--width-left-section)); */
-        --width-formulario: 300px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    :root {
-        --width-image-card: 270px;
         --width-body: 100%;
         --width-left-section: 100%;
         --width-right-section: 100%;
         --width-formulario: 100%;
-        /* --width-date-expiration: calc(var(--width-formulario) * 0.45); */
+        --percent-image: 0.65;
     }
 
     .container {
@@ -174,29 +151,40 @@ input {
     
     .left-section {
         grid-template-rows: repeat(10, 20px); 
+        height: 250px;
     }
-
     .tarjeta-front {
-        grid-column-start: 2;
+        grid-column: 2 / -1;
         grid-row-start: 7;
         position: absolute;
         z-index: 25;
     }
+
     .tarjeta-back {
-        grid-column-start: 4;
+        grid-column: 3 / -1;
         grid-row-start: 4;
     }
-
+    
     .formulario {
         padding-left: 15px;
         padding-right: 15px;
         margin-top: 90px;
     }
-    
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --width-body: 100%;
+        --width-left-section: 100%;
+        --width-right-section: 100%;
+        --width-formulario: 100%;
+        --percent-image: 0.60;
+    }
+
 }
 
 @media screen and (max-width: 400px) {
     :root {
-        --width-image-card: 200px;
+        --percent-image: 0.40;
     }
 }
