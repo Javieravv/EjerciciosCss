@@ -4,23 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selectores en css</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilos2.css">
+    <title>PseudoClases</title>
 </head>
 <body>
-    <h2 class='peliculas'>Películas</h2>
-    <ul>
-        <li class="pelicula">Spiderman 1-1</li>
-        <li class="pelicula favoritas">Spiderman 2</li>
-        <li class="pelicula" id="spidermanNoWayHome">Spider Verse</li>
-    </ul>
+    <h1>Pseudoclases</h1>
+    <h2 class="title">Pseudoclase active (<span>:active</span>)</h2>
+    <div class="botones">
+        <button>Botón 1</button>
+        <button>Botón 2</button>
+        <button>Botón 3</button>
+        <button>Botón 4</button>
+        <button>Botón 5</button>
+    </div>
+    <hr>
+    <h2 class="title">PseudoClase blank (expermiental) </h2>
+    <div class="formulario">
+        <form action="#">
+            <label for="input1">
+                <p>Nombres</p>
+                <input type="text" id="input1" placeholder="Escriba los nombres">
+            </label>
+            <label for="input2">
+                <p>Apellidos</p>
+                <input type="text" id="input2" placeholder="Escriba los apellidos">
+            </label>
+        </form>
+    </div>
 
-    <h2 class="series">The Office</h2>
-    <ul>
-        <li class="temporadas">Temporada 1</li>
-        <li class="temporadas">Temporada 2</li>
-        <li class="temporadas" id="temporada3">Temporada 3</li>
-    </ul>
-    
+    <hr>
+    <h2 class="title">PseudoClase checked y default </h2>
+    <div class="formulario1">
+        <h3>Formulario de opciones</h3>
+        <form action="#">
+            <h3>Seleccione frutas</h3>
+            <div class="frutas">
+                <input type="checkbox" name="check1" id="check1">
+                <label for="check1">
+                    Naranjas
+                </label>
+                <input type="checkbox" name="check2" id="check2">
+                <label for="check2">
+                    Bananas
+                </label>
+                <input type="checkbox" name="check3" id="check3" checked>
+                <label for="check3">
+                    Fresas
+                </label>
+                <input type="checkbox" name="check4" id="check4">
+                <label for="check4">
+                    Maracuyá
+                </label>
+            </div>
+        </form>
+    </div>
+    <hr>
+    <h2 class="title">PseudoClase focus </h2>
+    <div class="formulario">
+        <form action="#">
+            <label for="input1">
+                <p>Nombres</p>
+                <input type="text" id="input1" placeholder="Escriba los nombres">
+            </label>
+            <label for="input2">
+                <p>Apellidos</p>
+                <input type="text" id="input2" placeholder="Escriba los apellidos">
+            </label>
+            <label for="input3">
+                <p>Ciudad Nacimiento</p>
+                <input type="text" id="input3" placeholder="Ciudad de nacimiento">
+            </label>
+        </form>
+    </div>
+    <hr>
+    <div class="menu">
+        <a href="index.html">Principal</a>
+        <a href="index1-pseudo.html">Siguiente</a>
+    </div>
 </body>
 </html>

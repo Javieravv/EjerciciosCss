@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    padding: 0px 20px 0px 20px;
+}
+
+h1 {
+    color: blueviolet;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    color: red;
+    display: block;
+    padding: 15px 0px;
+    margin-bottom: 5px;
+    border-bottom: black solid 1px;
+}
+
+hr {
+    margin-top: 10px;
+}
+
+.div1 article:first-of-type + article {
+    color: rgb(86, 193, 86);
+}
+
+/* Selectores hijo */
+
+li > p {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+li > ul {
+    display: none;
+}
+
+li:hover > ul {
+    display: block;
+}
+
+a {
+    display: block;
+    padding: 10px 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Selectores hermanos generales */
+.selectorgeneral {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.selectorgeneral article {
+    width: 250px;
+    margin-bottom: 20px;
+    padding: 1px 10px;
+}
+
+h3 ~ p {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    color: orangered;
+    font-weight: 500;
+}

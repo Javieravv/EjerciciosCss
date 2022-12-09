@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    padding: 0px 20px 0px 20px;
+}
+
+h1 {
+    color: blueviolet;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0px;
+}
+
+h2 {
+    color: red;
+    display: block;
+    padding: 15px 0px;
+    margin-bottom: 5px;
+    border-bottom: black solid 1px;
+}
+
+hr {
+    margin-top: 10px;
+}
+
+hr {
+    border: 1px solid maroon;
+}
+
+/* Pseudoclase active  */
+
+.botones button {
+    background-color: blue;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin: 5px 5px;
+    min-width: 150px;
+    padding: 15px 25px;
+    transition: background-color 0.3s;
+}
+
+.botones button:hover {
+    background-color: rgb(79, 189, 226);
+}
+
+.botones button:active {
+    background-color: rgb(18, 13, 34);
+}
+
+/* Pseudoclase black y focus*/
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+form input[type=text] {
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px black solid;
+    padding-left: 20px;
+    /* background-color: black; */
+}
+
+form input:blank {
+    background-color: black;
+}
+
+/* Pseudoclase :checked */
+
+.formulario1 form {
+    display: flex;
+    flex-direction: column;
+}
+
+.frutas {
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0px;
+}
+
+input:checked + label  {
+    font-weight: bold;
+}
+
+input:checked  {
+    color: red;
+}
+
+input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+}
+
+input[type="checkbox"]:checked {
+    box-shadow: 0 0 0 4px rgb(9, 9, 91);
+    transform: scale(1.5);
+}
+
+/* Pseudoclase focus  */
+input[type="text"]:focus {
+    background-color: black;
+    color: white;
+    transition: background-color 0.15s;
+}
+
+/*Css para el menú*/
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.menu a {
+    background-color: rgb(209, 80, 80);
+    border-radius: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    min-width: 200px;
+    padding: 15px 0px;
+    text-align: center;
+}
+
+/*Pseudoclase empty*/
+
+.clase-empty article:empty {
+    height: 60px;
+    width: 100%;
+    background-color: orange;
+    border-radius: 11px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* pseudoclase enabled  */
+.formulario-enabled {
+    transition: padding 1.5s;
+}
+
+.formulario-enabled form:focus-within {
+    background-color: rgba(99, 135, 162, 0.541);
+    padding: 0px 15px;
+}
+
+
+.clase-enabled input:enabled {
+    background-color: rgb(55, 55, 240);
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+}
+
+.clase-enabled input:disabled {
+    background-color: hsla(0, 3%, 6%, 0.119);
+}
+
+/* Pseudoclaes first-child */
+
+.clase-firstchild article p:first-child {
+    font-weight: bold;
+    line-height: 1.5;
+    color: rgba(167, 20, 20, 0.79);
+    letter-spacing: 1px;
+}
+
+.clase-firstchild article:first-of-type {
+    background-color: orange;
+    border: none;
+    border-radius: 18px;
+    padding: 10px 5px;
+}
