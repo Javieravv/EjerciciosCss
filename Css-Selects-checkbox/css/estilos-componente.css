@@ -1,0 +1,226 @@
+/* Estilos generales */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    padding: 15px 0px;
+}
+
+h2 {
+    padding: 15px 0px;
+}
+
+h3 {
+    margin: 10px 5px;
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.content-select {
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+select {
+    appearance: none;
+}
+
+/*Eliminar la flecha que aparece por efecto*/
+.content-select select::-ms-expand {
+    display: none;
+}
+
+.content-select {
+    max-width: 400px;
+    position: relative;
+}
+
+.content-select select {
+    display: inline-block; 
+    width: 100%;
+    cursor: pointer;
+    padding: 7px 10px;
+    height: 42px;
+    outline: 0;
+    border: 0;
+    color: black;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid rgba(0,0,0,0.3);
+    border-radius: 6px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.content-select select:hover {}
+
+/* creamos la flecha */
+.content-select i {
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 13px);
+    width: 16px;
+    height: 16px;
+    display: block;
+    border-left: 4px solid black;
+    border-bottom: 4px solid black;
+    transform: rotate(-45deg);
+    transition: all 0.25s ease;
+}
+
+.content-select select option {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* Css para los checkbos personallizados */
+.componente-checkbox {
+    margin-left: 25px;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+input[type=checkbox] {
+    appearance: none;
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+}
+
+.content-input {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 5px 0 5px 60px;
+    display: block;
+    font-weight: 600;
+}
+
+.content-input input + i {
+    background: #f0f0f0;
+    border: 2px solid rgbal(0,0,0,0.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.content-input input[type=checkbox] + i {
+    width: 48px;
+    height: 26px;
+    border-radius: 15px;
+}
+
+.content-input input[type="checkbox"] + i:before {
+    content: '';
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    box-shadow: 3px 0 3px 0 rgba(0,0,0,0.2);
+}
+
+/* Movimiento del checkbox */
+.content-input input[type=checkbox]:checked + i:before {
+    left: 22px;
+    box-shadow: 3px 0 -3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content-input input[type=checkbox]:checked + i {
+    background: #6e1414;
+}
+
+/* Añadimos un on cuando el elemento esté seleccoinado */
+.content-input input[type=checkbox] + i:after {
+    content: 'ON';
+    position: absolute;
+    font-size: 10px;
+    color: rgba(255,255,255,1);
+    top: 8px;
+    left: 4px;
+    opacity: 0;
+    transition: all 0.25s ease 0.25s;
+}
+
+.content-input input[type=checkbox]:checked + i:after {
+    opacity: 1;
+}
+
+/*PERSONALIZAR LOS RADIO BUTTONS*/
+.componente-radio {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+input[type=radio] {
+    appearance: none;
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+}
+
+.content-radio {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 5px 0 5px 60px;
+    display: block;
+    /* border: red 1px solid; */
+}
+
+.content-radio input + i {
+    background: #f0f0f0;
+    border: 2px solid rgba(0,0,0,0.2);
+    /* border: 2px solid red; */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.content-radio input[type=radio] + i {
+    height: 30px;
+    width: 30px;
+    border-radius: 1000%;
+    left: 15px;
+}
+
+/* Dibujar el círculo cuando se dé click.  */
+.content-radio input[type=radio] + i:before {
+    content: '';
+    display: block;
+    height: 18px;
+    width: 18px;
+    background: red;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 4px;
+    left: 4px;
+    background: #2ac176;
+    transition: all 0.25s ease;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.content-radio input[type=radio]:checked + i:before {
+    transform: scale(1);
+    opacity: 1
+}
+
+.content-radio:hover input[type=radio]:not(:checked) + i {
+    background: #b1e8cd;
+}
+
+
