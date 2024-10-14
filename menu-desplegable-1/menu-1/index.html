@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú desplegable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav id="nav-main">
+            <ul class="menu-horizontal">
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+                <li>
+                    <a href="#">Cursos</a>
+                    <ul class="menu-vertical">
+                        <li><a href="#">Derecho Penal</a></li>
+                        <li><a href="#">Derecho Civil</a></li>
+                        <li><a href="#">Derecho Comercial</a></li>
+                        <li><a href="#">Constitucional</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Inscripción</a>
+                    <ul class="menu-vertical">
+                        <li><a href="#">Anual</a></li>
+                        <li><a href="#">Mensual</a></li>
+                        <li><a href="#">Semestral</a></li>
+                        <li><a href="#">Bimensual</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Materias</a>
+                    <ul class="menu-vertical">
+                        <li><a href="#">Procesal</a></li>
+                        <li><a href="#">Informática</a></li>
+                        <li><a href="#">Computadores</a></li>
+                        <li><a href="www.google.com.co">Google</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- formulario  -->
+     <section class="formulario">
+        <article class="radios">
+            <label for="radiomateria">Materia 1</label>
+            <input type="radio" name="radiomateria" id="radiomateria" value="materia1">
+            <label for="radiomateria1">Materia 2</label>
+            <input type="radio" name="radiomateria" id="radiomateria1" value="materia2">
+            <label for="radiomateria2">Materia 3</label>
+            <input type="radio" name="radiomateria" id="radiomateria2" value="materia3">
+        </article>
+        <button class="btn">Saber valores</button>
+     </section>
+
+     <!-- Mostrar el target clickeado -->
+      <section class="target-class">
+        <h2 id="target-value"></h2>
+      </section>
+     
+     <script src="main.js"></script>
+</body>
+
+</html>

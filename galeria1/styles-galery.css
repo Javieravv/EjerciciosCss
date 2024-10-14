@@ -1,0 +1,33 @@
+/* Css para la galería*/
+
+* {
+    /* outline: 1px solid blue; */
+}
+body {
+    color: red;
+    display: flex;
+    flex-direction: column;
+    width: min(1200px, 98%);
+    align-items: center;
+}
+
+.list-images {
+    display: flex;
+    width: min(800px, 80%);
+    height: 500px;
+
+    img {
+        width: 0;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: .6;
+        transition: .5s ease;
+
+        &:hover {
+            cursor: crosshair;
+            width: 350px;
+            opacity: 1;
+            filter: contrast(120%);
+        }
+    }
+}

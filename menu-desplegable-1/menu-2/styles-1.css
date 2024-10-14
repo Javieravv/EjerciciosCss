@@ -1,0 +1,159 @@
+:root {
+    --bgcolor-menu: #3b3737;
+    --minheight-navbar: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+a {
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.4rem;
+    padding: 25px 5px;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    background-color: var(--bgcolor-menu);
+    min-height: var(--minheight-navbar);
+    display: flex;
+    position: relative;
+}
+
+nav {
+    width: 60%;
+    position: absolute;
+    display: flex;
+    /* border: 1px solid green; */
+    background-color: var(--bgcolor-menu);
+    top: var(--minheight-navbar);
+    bottom: 0;
+    right: 0;
+    min-height: 100vh;
+}
+
+.menu-horizontal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.menu-horizontal>li>a {
+    color: white;
+    display: block;
+    padding: 15px 30px;
+}
+
+.menu-horizontal>li:hover {
+    background-color: red;
+}
+
+.menu-vertical {
+    display: none;
+    opacity: 0;
+    min-width: 250px;
+    background-color: var(--bgcolor-menu);
+    transition: opacity 0.85s;
+    /* height: 0;
+    overflow: hidden; */
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+    opacity: 1;
+    /* height: auto; */
+}
+
+.menu-vertical li:hover {
+    background-color: black;
+}
+
+.menu-vertical li a {
+    color: white;
+    display: block;
+    padding: 15px 20px;
+
+}
+
+@media (width >=1050px) {
+    nav {
+        width: 90%;
+        margin: auto;
+        position: relative;
+        min-height: var(--minheight-navbar);
+        top: 0;
+    }
+
+    .menu-horizontal {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu-horizontal>li>a {}
+
+    .menu-horizontal>li:hover {}
+
+    .menu-vertical {
+        position: absolute;
+    }
+
+    .menu-horizontal li:hover .menu-vertical {}
+
+    .menu-vertical li:hover {}
+
+    .menu-vertical li a {}
+}
+
+/* ========================================================
+Formulario
+======================================================== */
+
+
+.formulario,
+.target-class {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    .radios {
+        display: flex;
+        gap: 25px;
+    }
+
+    label {
+        font-size: 1.5rem;
+    }
+
+    input[type='radio'] {
+        width: 25px;
+        height: 25px;
+    }
+
+}
+
+.btn {
+    margin-top: 15px;
+    background: green;
+    padding: 15px 45px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
