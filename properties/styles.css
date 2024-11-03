@@ -1,0 +1,27 @@
+@property --color1 {
+    sintax: "<color>";
+    inherits: true;
+    initial-value:  rgba(127, 255, 212, 0.601);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    /* background-color: rgba(127, 255, 212, 0.601); */
+    /* --color: initial; */
+    background-color: var(--color1);
+}
+
+main {
+    width: min(1200px, 95%);
+    outline: 2px green solid;
+    margin: 10px auto;
+    padding: 5px;
+    container: container-main / inline-size;
+    color: var(--color1);
+}

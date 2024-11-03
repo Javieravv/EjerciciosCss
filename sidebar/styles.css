@@ -1,0 +1,100 @@
+:root {
+    --widthSideBar: 50px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: orange;
+}
+
+header {
+    padding-left: 200px;
+}
+
+#title {
+    cursor: pointer;
+}
+
+.sidebar {
+    background-color: rgb(16, 89, 234);
+    color: white;
+    position: fixed;
+    /* width: 50px; */
+    width: var(--widthSideBar);
+    padding: 15px 10px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    top: 0;
+    transition: width .45s ease-in;
+
+    &:hover {
+        /* width: 200px; */
+        --widthSideBar: 200px;
+    }
+
+    div {
+        display: grid;
+        grid-template-columns: 50px 0fr;
+        cursor: pointer;
+        overflow: hidden;
+
+
+        &:hover {
+            color: gray;
+            /* --widthSideBar: 200px; */
+            overflow: auto;
+            grid-template-columns: 50px 1fr;
+            place-content: center;
+            /* justify-items: center; */
+
+            svg {
+                fill: gray !important;
+            }
+        }
+
+        /* p {
+            display: block;
+        } */
+    }
+
+    /* &:hover div {
+        overflow: auto;
+        grid-template-columns: 50px 1fr;
+        --widthSideBar: 200px;
+    } */
+}
+
+.sidebar div:last-child {
+    margin-top: auto;
+}
+
+svg {
+    fill: white !important;
+    cursor: pointer;
+}
+
+/* @media (min-width: 700px) {
+    :root {
+        --widthSideBar: 200px;
+    }
+    .sidebar {
+        width: 200px;
+
+        div {
+            grid-template-columns: 50px 1fr;
+            justify-items: start;
+            align-items: center;
+
+            p {
+                display: block;
+            }
+        }
+    }
+} */
