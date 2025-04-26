@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: min(95%, 800px);
+    background-color: #e6dcdc;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Contenedor de los tabs */
+.section-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+/* Ocultar los radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Estilos para los tabs */
+label {
+    cursor: pointer;
+    height: 40px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid blue;
+    border-radius: 5px;
+    padding: 10px;
+    background: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Tab seleccionado */
+input[type="radio"]:checked + label {
+    background-color: blue;
+    color: white;
+}
+
+/* Contenedor del contenido */
+.section-content {
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Ocultar contenido por defecto */
+.section-tabs_item {
+    display: none;
+    padding: 20px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    background: white;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Mostrar el contenido del tab activo */
+.section-tabs input[type="radio"]:checked:nth-of-type(1) ~ .section-content .tab1,
+.section-tabs input[type="radio"]:checked:nth-of-type(2) ~ .section-content .tab2,
+.section-tabs input[type="radio"]:checked:nth-of-type(3) ~ .section-content .tab3 {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}

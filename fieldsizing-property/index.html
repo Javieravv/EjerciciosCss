@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo field-sizing property</title>
+    <link rel="stylesheet" href="stylesfiledsizing.css">
+</head>
+<body>
+    <main>
+        <h1>Ejercicios propiedad field-sizing</h1>
+        <!-- Primer ejemplo -->
+        <section class="ejemplos textareafield">
+            <h2>Campo text area</h2>
+            <label for="textarea">Ingrese observaciones</label>
+            <textarea 
+            name="observaciones" 
+            id="textarea"></textarea>
+        </section>
+
+        <!-- Segundo ejemplo -->
+        <section class="ejemplos">
+            <h2>Campos Input</h2>
+            <label for="nombres">Nombres</label>
+            <input type="text" name="nombres" id="nombres" placeholder="Ingrese sus nombres" required class="inputnombres">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus apellidos" required class="inputnombres">
+        </section>
+        <!-- Tercer ejemplo -->
+        <section class="ejemplos codigos">
+            <h2>Campos inputs que tienen una longitud determinada</h2>
+            <label for="codigos">Ingrese códigos</label>
+            <input type="text" name="codigos" id="codigos" placeholder="Códigos" required maxlength="20" class="inputcodigos">
+        </section>
+    </main>
+</body>
+</html>

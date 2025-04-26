@@ -1,0 +1,149 @@
+:root {
+    --witch: min(98%, 1000px);
+    --gapdivs: 8px;
+    --backcolorheader:  rgba(81, 18, 229, 0.809);
+    --backcolorheaderscroll:    rgba(78, 3, 255, 0.82);
+    --heightheader: 60px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(33, 88, 103, 0.135);
+}
+
+ul, li {
+    list-style: none;
+}
+
+img {
+    border-radius: 8px;
+    /* aspect-ratio: 1 / 1; */
+}
+
+
+h1 {
+    font-size: clamp(2rem, 2.8rem, 4rem);
+    text-align: center;
+}
+
+header {
+    height: var(--heightheader);
+    background-color: var(--backcolorheader);
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0px;
+    animation: adjust-header linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+}
+
+@keyframes adjust-header {
+    to {
+        background:  var(--backcolorheaderscroll);
+        font-size: 12px;
+        /* height: 32px; */
+        --heightheader: 32px;
+        border-radius: 0;
+    }
+}
+
+nav {
+    /* width: min(98%, 1100px); */
+    width: var(--witch);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 250px;
+}
+
+.opciones {
+    flex: 1;
+}
+
+.opciones_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* ===================
+Sección principal
+==================== */
+
+.sectionmain {
+    width: var(--witch);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionmain p {
+    font-size: 1.2rem;
+}
+
+.sectiongeneral {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gapdivs);
+}
+
+.sectionmain_items-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.sectionmain_items-images img {
+    /* width: min(40%, 600px);
+    height: max(500px, auto);
+    aspect-ratio: 3 / 3;
+    flex: 1; */
+    width: min(40%, 600px);
+    /* width: 100%; La imagen ocupa todo el ancho del contenedor */
+    aspect-ratio: 1 / 1;
+    flex: 1;
+    object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+}
+
+@media (min-width : 900px) {
+    .sectionmain {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .sectionmain_items {
+        flex: 2;
+    }
+
+    .sectionmain_sticky {
+        order: 2;
+        /* width: 30%; */
+        flex: 1;
+        position: sticky;
+        top: 35px;
+        height: fit-content;
+        margin-left: 2%;
+        margin-top: 10px;
+        padding: 8px;
+        border-radius: 8px;
+        border: 2px solid var(--backcolorheader);
+    }
+
+}

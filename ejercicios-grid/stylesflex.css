@@ -1,0 +1,99 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+main {
+    width: min(95%, 1200px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Css para el ejercicio 1 */
+.container1 {
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    min-height: 100px;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    background-color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Css para barra de navegación adaptable */
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    background-color: rgba(0, 128, 0, 0.5);
+    min-height: 60px;
+    color: white;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+@media (max-width: 600px) {
+    .nav {
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px;
+        align-items: center;
+    }
+}
+
+/* css para ejercicio 3 */
+.containerrows {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    gap: 8px;
+}
+
+.row-item {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 6px;
+    width: min(300px, 98%);
+    /* margin: auto; */
+}
+
+.row-item:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.4s ease-in-out;
+}

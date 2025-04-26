@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: min(95%, 1250px);
+    background-color: rgba(115, 56, 56, 0.251);
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.section-tabs {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+a {
+    text-decoration: none;
+    /* width: 180px; */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid blue;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.section-tabs_item {
+    margin-top: 10px;
+    display: none;
+}
+
+.section-tabs_item:target {
+    display: block;
+}
