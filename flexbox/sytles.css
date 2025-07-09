@@ -21,10 +21,14 @@ body {
     color: var(--colorFont);
 }
 
-h1 {}
+h2 {
+    color: white;
+    font-size: clamp(2.25rem, 4vw, 3.25rem);
+}
 
 .sebas {
     width: min(90%, 1200px);
+    min-width: 0;
     margin: 0 auto;
     min-height: 400px;
     display: flex;
@@ -48,7 +52,7 @@ h1 {}
 }
 
 .sebas__description {
-    flex: 3 1 400px;
+    flex: 15 1 400px;
     display: flex;
     flex-direction: column;
     gap: 25px;
